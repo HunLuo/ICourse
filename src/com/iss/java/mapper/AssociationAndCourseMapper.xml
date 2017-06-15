@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.iss.java.dao.AssociationAndCourseMapper">
+  <resultMap id="BaseResultMap" type="com.iss.java.model.AssociationAndCourse">
+    <id column="assocition_course_id" jdbcType="INTEGER" property="associtionCourseId" />
+    <result column="association_id" jdbcType="INTEGER" property="associationId" />
+    <result column="course_id" jdbcType="INTEGER" property="courseId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    assocition_course_id, association_id, course_id
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from icourse_association_course
+    where assocition_course_id = #{associtionCourseId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from icourse_association_course
+    where assocition_course_id = #{associtionCourseId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.iss.java.model.AssociationAndCourse">
+    insert into icourse_association_course (assocition_course_id, association_id, 
+      course_id)
+    values (#{associtionCourseId,jdbcType=INTEGER}, #{associationId,jdbcType=INTEGER}, 
+      #{courseId,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.iss.java.model.AssociationAndCourse">
+    insert into icourse_association_course
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="associtionCourseId != null">
+        assocition_course_id,
+      </if>
+      <if test="associationId != null">
+        association_id,
+      </if>
+      <if test="courseId != null">
+        course_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="associtionCourseId != null">
+        #{associtionCourseId,jdbcType=INTEGER},
+      </if>
+      <if test="associationId != null">
+        #{associationId,jdbcType=INTEGER},
+      </if>
+      <if test="courseId != null">
+        #{courseId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.iss.java.model.AssociationAndCourse">
+    update icourse_association_course
+    <set>
+      <if test="associationId != null">
+        association_id = #{associationId,jdbcType=INTEGER},
+      </if>
+      <if test="courseId != null">
+        course_id = #{courseId,jdbcType=INTEGER},
+      </if>
+    </set>
+    where assocition_course_id = #{associtionCourseId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.iss.java.model.AssociationAndCourse">
+    update icourse_association_course
+    set association_id = #{associationId,jdbcType=INTEGER},
+      course_id = #{courseId,jdbcType=INTEGER}
+    where assocition_course_id = #{associtionCourseId,jdbcType=INTEGER}
+  </update>
+</mapper>

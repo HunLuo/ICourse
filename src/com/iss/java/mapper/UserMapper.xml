@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.iss.java.dao.UserMapper">
+  <resultMap id="BaseResultMap" type="com.iss.java.model.User">
+    <id column="userinfo_userId" jdbcType="INTEGER" property="userinfoUserid" />
+    <result column="userinfo_username" jdbcType="VARCHAR" property="userinfoUsername" />
+    <result column="userinfo_password" jdbcType="VARCHAR" property="userinfoPassword" />
+    <result column="user_type" jdbcType="INTEGER" property="userType" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    userinfo_userId, userinfo_username, userinfo_password, user_type
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from icourse_userinfo
+    where userinfo_userId = #{userinfoUserid,jdbcType=INTEGER}
+  </select>
+    <select id="selectByUsername" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from icourse_userinfo
+    where userinfo_username = #{userinfoUsername,jdbcType=INTEGER}
+  </select>
+      <select id="selectAllUsers"  resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from icourse_userinfo
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from icourse_userinfo
+    where userinfo_userId = #{userinfoUserid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.iss.java.model.User">
+    insert into icourse_userinfo (userinfo_userId, userinfo_username, 
+      userinfo_password, user_type)
+    values (#{userinfoUserid,jdbcType=INTEGER}, #{userinfoUsername,jdbcType=VARCHAR}, 
+      #{userinfoPassword,jdbcType=VARCHAR}, #{userType,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.iss.java.model.User">
+    insert into icourse_userinfo
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="userinfoUserid != null">
+        userinfo_userId,
+      </if>
+      <if test="userinfoUsername != null">
+        userinfo_username,
+      </if>
+      <if test="userinfoPassword != null">
+        userinfo_password,
+      </if>
+      <if test="userType != null">
+        user_type,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="userinfoUserid != null">
+        #{userinfoUserid,jdbcType=INTEGER},
+      </if>
+      <if test="userinfoUsername != null">
+        #{userinfoUsername,jdbcType=VARCHAR},
+      </if>
+      <if test="userinfoPassword != null">
+        #{userinfoPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="userType != null">
+        #{userType,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.iss.java.model.User">
+    update icourse_userinfo
+    <set>
+      <if test="userinfoUsername != null">
+        userinfo_username = #{userinfoUsername,jdbcType=VARCHAR},
+      </if>
+      <if test="userinfoPassword != null">
+        userinfo_password = #{userinfoPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="userType != null">
+        user_type = #{userType,jdbcType=INTEGER},
+      </if>
+    </set>
+    where userinfo_userId = #{userinfoUserid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.iss.java.model.User">
+    update icourse_userinfo
+    set userinfo_username = #{userinfoUsername,jdbcType=VARCHAR},
+      userinfo_password = #{userinfoPassword,jdbcType=VARCHAR},
+      user_type = #{userType,jdbcType=INTEGER}
+    where userinfo_userId = #{userinfoUserid,jdbcType=INTEGER}
+  </update>
+</mapper>

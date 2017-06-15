@@ -1,0 +1,182 @@
+.beg-login-bg {
+	background: url(../img/11.jpg) no-repeat center center fixed;
+	background-color: #393D49;
+}
+
+.beg-login-box {
+	
+	width: 450px;
+	height: 360px;
+	margin-top: 280px;
+	margin-left: 750px;
+	background-color: rgba(255, 255, 255, 0.407843);
+	border-radius: 10px;
+	color: aliceblue;
+}
+
+.beg-login-box header {
+	height: 39px;
+	padding: 10px;
+	border-bottom: 1px solid aliceblue;
+}
+
+.beg-login-box header h1 {
+	text-align: center;
+	font-size: 25px;
+	line-height: 40px;
+}
+.layui-form{
+	width: 350px;
+	height: 250px;
+}
+
+.beg-login-box .beg-login-main {
+	height: 185px;
+	padding: 30px 90px 0;
+}
+
+.beg-login-main .layui-form-item {
+	position: relative;
+	margin-left: 20px;
+}
+
+.beg-login-main .layui-form-item .beg-login-icon {
+	position: absolute;
+	color: #cccccc;
+	top: 10px;
+	left: 10px;
+	margin-left: -30px;
+}
+
+.beg-login-main .layui-form-item input {
+	padding-left: 34px;
+}
+
+.beg-login-box footer {
+	position: absolute;
+	margin-top: 40px;
+	margin-left: 72px;
+	width: 300px;
+	height: 20px;
+	text-align: center;
+}
+
+
+
+.beg-pull-left {
+	float: left !important;
+}
+
+.beg-pull-right {
+	float: right !important;
+}
+
+.beg-clear {
+	clear: both;
+}
+
+.beg-login-remember {
+	line-height: 38px;
+}
+
+.beg-login-remember .layui-form-switch {
+	margin-top: 0px;
+}
+
+.beg-login-code-box {
+	position: relative;
+	padding: 10px;
+}
+
+.beg-login-code-box input {
+	position: absolute;
+	width: 100px;
+}
+
+.beg-login-code-box img {
+	cursor: pointer;
+	position: absolute;
+	left: 115px;
+	height: 38px;
+}
+
+.cloud{
+	position:absolute;
+	width: 100%;
+	height: 75%;
+	margin-top: -120px;
+	background:
+	url(../img/cloud.png)
+	no-repeat;
+	opacity: 0.5;
+	/*透明度*/
+}
+html {
+	
+}
+body {
+	margin:0px;
+    background:url(../img/11.jpg);
+    no-repeat;
+}
+.cl{ clear: both;}
+input[type="text"]:focus, input[type="password"]:focus {
+	outline:none;
+}
+input::-ms-clear {
+	display:none;
+}
+.cloud{
+	position:absolute;
+	width: 100%;
+	height: 75%;
+	margin-top: -120px;
+	background:
+	url(../img/cloud.png)
+	no-repeat;
+	opacity: 0.5;
+	z-index: -1;
+	/*透明度*/
+}
+h1{
+	
+	margin:0px auto 50px auto;
+    text-align:center;
+    color:#fff;
+    margin-left:-25px;
+    font-size:35px;
+    font-weight: bold;
+    text-shadow: 0px 1px 1px #555;
+}
+h1 sup{
+    font-size: 18px;
+    font-style: normal;
+    position: absolute;
+    margin-left: 10px;
+}
+.r{
+	width: 298px;
+	height:38px;
+	margin-left:-30px;
+}
+.red{
+	border:2px solid #d84f4b;
+	width: 298px;
+	height:38px;
+	margin-left:-30px;
+}
+.green{
+	border:2px solid #00a600;
+	width: 298px;
+	height:38px;
+	margin-left:-30px;
+}
+
+.layui-input-block{
+	margin-left:-1px;
+}
+.button1{
+	margin-left: 160px;
+}
+
+

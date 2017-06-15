@@ -1,0 +1,38 @@
+.content{
+	padding: 20px 0;
+	margin-left: 75px;
+}
+.l1{
+	color: #FFFFFF;
+}
+.beg-login-bg {
+	background: url(../img/1.jpg) no-repeat center center fixed;
+	background-color:#666666;
+}
+
+.beg-login-box {
+	
+	width: 450px;
+	height: 340px;
+	margin-left: 750px;
+	margin-top: 250px;
+	background-color:#FFFFFF;
+	border-radius: 10px;
+	color:#000000;
+}
+.long{
+	width: 200px;
+}
+.red{
+	border:solid;
+	color:#FF5722;
+	width: 311px;
+	height: 38px;
+}
+.green{
+	border:solid;
+	color:#5FB878;
+	width: 311px;
+	height: 38px;
+}
+

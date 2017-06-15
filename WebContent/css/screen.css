@@ -1,0 +1,103 @@
+/*
+
+Screen Stylesheet for jQuery Realistic Hover Effect
+Created by Adrian Pelletier
+http://www.adrianpelletier.com
+
+*/
+
+
+/* =Imports
+============================================================================== */
+
+	@import url("resets.css");
+
+
+/* =Base Structure
+============================================================================== */
+	
+	body {
+		background: #fffff;
+		color: #FFFFFF;
+		}
+
+	#content {
+		width: 1200px;
+		margin: 100px auto;
+		}
+		
+	
+
+/* =Navigation
+============================================================================== */
+
+	/* =Reflection Nav
+	-------------------------------------------------------------------------- */
+
+			
+			
+	/* =Shadow Nav
+	-------------------------------------------------------------------------- */
+		
+		
+			
+		#nav-shadow li {
+			margin-right: 15px;
+			width: 185px;
+			height: 185px;
+			position: relative;
+			float: left;
+			}
+			
+		#nav-shadow a, #nav-shadow a:visited, #nav-shadow a, #nav-shadow a:hover {
+			margin: 0 auto;
+			width: 155px;
+			height: 155px;
+			text-indent: -9999px;
+			overflow: hidden;
+			background: url(../images/icons.png) no-repeat;
+			display: block;
+			position: relative;
+			z-index: 2;
+			}
+			
+		/* Button Colors */
+		
+		#nav-shadow li.button-color-1 a {
+			
+			background-image: url(../ins/attendance.png);
+			}
+			
+		#nav-shadow li.button-color-2 a {
+			
+			background-image: url(../ins/bbs.png);
+			}
+			
+		#nav-shadow li.button-color-3 a {
+			
+			background-image: url(../ins/book.png);
+			}
+			
+		#nav-shadow li.button-color-4 a {
+			
+			background-image: url(../ins/calendar.png);
+			}
+		#nav-shadow li.button-color-5 a {
+			
+			background-image: url(../ins/default.png);
+			}
+		#nav-shadow li.button-color-6 a {
+			
+			background-image: url(../ins/diary.png);
+			}
+		#nav-shadow li.button-color-7 a {
+			
+			background-image: url(../ins/email.png);
+			}
+		#nav-shadow li.button-color-8 a {
+			
+			background-image: url(../ins/news.png);
+			}			
+		/* Button Shadow */
+		
+		
